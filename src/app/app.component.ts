@@ -9,4 +9,8 @@ export class AppComponent {
   public name = 'Đỗ Thanh Linh';
   public age = 18;
   title = 'AngularTest';
+
+  public mainName():void{
+   this.name = ""
+  }
 }
