@@ -1,10 +1,16 @@
 <h2>Xin chào mọi người mình tên là {{name}}</h2>
 
 <app-home></app-home>
-<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="age">
 <input type="text" value="{{name}}" title="Đây là {{name}}">
 <br>
-
-<!-- <h2 *ngIf="age >= 18">Đã đủ tuổi</h2>
-<h2 *ngIf="age < 18">Chưa đủ tuổi</h2> -->
+<h2 *ngIf="age >= 18">Đã đủ tuổi</h2>
+<h2 *ngIf="age < 18">Chưa đủ tuổi</h2>
 <button (click)="mainName()" > Chọn</button>
+
+<!-- Sử dụng ng-template -->
+
+<div *ngIf="age >=18 then roi ; else chua"> </div>
+<ng-template #roi><h2>Đã đủ tuổi </h2></ng-template>
+<ng-template #chua><h2>Chưa đủ tuổi</h2></ng-template>
+
